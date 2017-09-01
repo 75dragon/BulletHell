@@ -34,9 +34,9 @@ public class Player
 
     Timer abilityTimer;
 
-    int playerSpeed = 200;
+    int playerSpeed = 800;
 
-    int fireDelay = 250;
+    int fireDelay = 50;
 
     int Abilitydelay = 1000;
 
@@ -213,8 +213,10 @@ public class Player
             {
                 if ( fire == true && canFire == true )
                 {
-                    Bullet fire = new Bullet( 1, X, Y, 3, 3, 270, 500, 0, 0, false, null, world );
-                    world.addBullet( fire );
+                    Bullet firel = new Bullet( 1, X - 10, Y, 3, 3, 270, 500, 0, 0, false, null, world );
+                    Bullet firer = new Bullet( 1, X + 10, Y, 3, 3, 270, 500, 0, 0, false, null, world );
+                    world.addBullet( firel );
+                    world.addBullet( firer );
                 }
             }
         } );
